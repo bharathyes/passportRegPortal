@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<title>Passport Application</title>
+	</head>
+	<body>
+		<a href="index.html"><div align="center" id="header"><h1>Web Portal of Passport Seva, India</h1></div></a>
+		<div id="nav">
+			<a href="register.html"><div id="navItem">New User</div></a>
+			<a href="login.html"><div id="navItem">Login</div></a>
+			<a href="check.html"><div id="navItem">Check Status</div></a>
+		</div>
+		
+		<h3 id="section">&nbsp;&nbsp;&nbsp; Check Status of Application</h3>
+		
+		<div align="left" id="forms">
+			<form action="checkUser.php" method="POST">
+				<h3>User Name :</h3>
+				    <input type="text" name="Username" />
+				<br /><br / ><br />
+			    <input type="submit" name="submit" value="Check Status" /><input type="reset" value="Cancel">
+			 </form>
+		</div>
+		
+		<footer>
+			
+Passport Seva
+Consular, Passport &amp; Visa Division
+Ministry of External Affairs, Government of India
+
+		</footer>
+	</body>
+</html>

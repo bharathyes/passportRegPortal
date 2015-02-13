@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<title>Passport Application</title>
+	</head>
+	<body>
+		<a href="index.html"><div align="center" id="header"><h1>Web Portal of Passport Seva, India</h1></div></a>
+		<div id="nav">
+			<a href="register.html"><div id="navItem">New User</div></a>
+			<a href="login.html"><div id="navItem">Login</div></a>
+			<a href="check.html"><div id="navItem">Check Status</div></a>
+		</div>
+		
+		<h3 id="section">&nbsp;&nbsp;&nbsp; New User Registration</h3>
+		
+		<div align="left" id="forms">
+			<form action="sendToDatabase.php" method="POST">
+				<h3>First Name :</h3>
+				    <input type="text" name="FirstName" />
+			    <h3>Last Name :</h3>
+				    <input type="text" name="LastName" />
+				<br />
+				<h3>Gender :</h3>
+					<input type="radio" name="gender" value="male" checked>Male &nbsp;
+				    <input type="radio" name="gender" value="female">Female
+				<h3>User Name :</h3>
+				    <input type="text" name="Username" />
+				<h3>DOB :</h3><span style="font-size:16px;">[ ex: 2015-02-13 ]</span> <br /><br />
+				    <input type="date" name="dob" />
+			    <h3>E-Mail ID :</h3>
+				    <input type="email" name="email" />
+				<h3>Password :</h3>
+				    <input type="password" name="password" />
+				<h3>Mobile Number :</h3>
+				    <input type="tel" name="mobile" />
+				<br /><br / ><br />
+			
+			    <input type="submit" name="submit" value="Register Now" /><input type="reset" value="Cancel">
+			</form>
+		</div>
+		
+		<footer>
+			
+Passport Seva
+Consular, Passport &amp; Visa Division
+Ministry of External Affairs, Government of India
+
+		</footer>
+	</body>
+</html>

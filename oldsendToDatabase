@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Successful Registation</title>
+
+<!--php
+//Connecting to sql db.
+$connect = mysqli_connect("mysql.hostinger.in","u168850769_root","hostingerpass04","u168850769_model");
+//Sending form data to sql db.
+mysqli_query($connect,"INSERT INTO passport (firstName, lastName, gender, username,dob,email,password,mobile)
+VALUES ('$_POST[post_firstName]', '$_POST[post_lastName]', '$_POST[post_gender]', '$_POST[post_username]', '$_POST[post_dob]', '$_POST[post_email]', '$_POST[post_password]', '$_POST[post_mobile]')";
+?>
+
+-->
+
+<?php
+$servername = "mysql.hostinger.in";
+$username = "u168850769_root";
+$password = "hostingerpass04";
+$dbname = "u168850769_model";
+$conn = new mysqli($servername, $username, $password, $dbname);
+if ($conn -> connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+$sql = "INSERT INTO passport (firstName, lastName, gender, username,dob,email,password,mobile)
+VALUES ('$_POST[post_firstName]', '$_POST[post_lastName]', '$_POST[post_gender]', '$_POST[post_username]', '$_POST[post_dob]', '$_POST[post_email]', '$_POST[post_password]', '$_POST[post_mobile]')";
+
+if ($conn->query($sql) === TRUE) {
+    echo "New record created successfully";
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+}
+
+$conn->close();
+?> 
+</head>
+<body>
+<h2>Successful.</h2>
+</body>
+</html>
